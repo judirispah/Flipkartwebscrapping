@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+{%block head%}
+<title>Result Page</title>
+{% endblock %}
+{%block body%}
+<div style="background:skyblue ;border:2px"><center >
+<h1>REVIEW</h1></center>
+
+<div class="table-responsive">
+
+
+
+
+  <table class="table align-middle">
+    <thead>
+      <tr>
+          <th>Product</th>
+          <th>Price</th>
+         <th>Name</th>
+         <th>Rating</th>
+         <th>Comment Heading</th>
+         <th width="230">Comments</th>
+      </tr>
+    </thead>
+
+
+        {%for j in review%}
+
+      <tr class="align-bottom">
+        ...
+      </tr>
+      <tr>
+
+        <td>{{j['Product']}}</td>
+          <td>{{j['Price']}}</td>
+         <td>{{j['Name']}}</td>
+         <td>{{j['Rating']}}</td>
+         <td>{{j['CommentHead']}}</td>
+         <td>{{j['Comment']}} </td>
+       {% endfor %}
+
+
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </div>
+
+
+
+{%endblock%}
